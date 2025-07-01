@@ -1,5 +1,6 @@
 package com.albaraka.train.local.entity;
 
+import com.albaraka.train.core.service.BaseEntity;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -13,10 +14,7 @@ import java.time.LocalTime;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class Trip {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long tripId;          // trip_id
+public class Trip extends BaseEntity {
 
     @Column(nullable = false, unique = true, length = 20)
     private String tripNumber;

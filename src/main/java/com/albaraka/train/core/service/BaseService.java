@@ -4,7 +4,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;
 
-public abstract class BaseService<T,ID> implements CRUDService<T,ID>{
+public abstract class BaseService<T extends BaseEntity,ID> implements CRUDService<T,ID>{
 
     protected abstract JpaRepository<T, ID> getRepository();
 

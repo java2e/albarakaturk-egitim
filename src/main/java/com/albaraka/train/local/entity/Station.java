@@ -1,4 +1,5 @@
 package com.albaraka.train.local.entity;
+import com.albaraka.train.core.service.BaseEntity;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -10,10 +11,7 @@ import java.math.BigDecimal;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class Station {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long stationId;       // station_id
+public class Station extends BaseEntity {
 
     @Column(nullable = false, unique = true, length = 10)
     private String code;
