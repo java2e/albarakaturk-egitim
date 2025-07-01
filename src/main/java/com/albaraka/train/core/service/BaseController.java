@@ -6,9 +6,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 public abstract class BaseController<E> {
-
-    BaseService service;
-
     public abstract BaseService getBaseService();
 
     @PostMapping("/create")
