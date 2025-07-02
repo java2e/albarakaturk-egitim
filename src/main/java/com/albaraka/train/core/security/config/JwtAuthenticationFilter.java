@@ -1,5 +1,6 @@
 package com.albaraka.train.core.security.config;
 
+import com.albaraka.train.core.security.token.TokenRepository;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
@@ -13,8 +14,6 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.web.authentication.WebAuthenticationDetailsSource;
 import org.springframework.stereotype.Component;
 import org.springframework.web.filter.OncePerRequestFilter;
-import tr.sesasis.core.security.token.TokenRepository;
-
 import java.io.IOException;
 
 @Component

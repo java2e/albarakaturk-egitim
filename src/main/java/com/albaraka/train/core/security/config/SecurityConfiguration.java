@@ -15,9 +15,6 @@ import org.springframework.security.web.authentication.logout.LogoutHandler;
 
 import static org.springframework.http.HttpMethod.*;
 import static org.springframework.security.config.http.SessionCreationPolicy.STATELESS;
-import static tr.sesasis.core.security.user.Permission.*;
-import static tr.sesasis.core.security.user.Role.ADMIN;
-import static tr.sesasis.core.security.user.Role.MANAGER;
 
 @Configuration
 @EnableWebSecurity
