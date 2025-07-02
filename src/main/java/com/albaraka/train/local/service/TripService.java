@@ -20,4 +20,8 @@ public class TripService extends BaseService<Trip,Long> {
     protected JpaRepository<Trip, Long> getRepository() {
         return tripRepository;
     }
+
+    public void test() throws Exception {
+        throw new Exception("HATA FIRLATILDI1");
+    }
 }

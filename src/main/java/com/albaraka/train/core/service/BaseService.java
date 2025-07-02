@@ -38,4 +38,6 @@ public abstract class BaseService<T extends BaseEntity,ID> implements CRUDServic
     public void delete(ID id) {
         getRepository().deleteById(id);
     }
+
+
 }

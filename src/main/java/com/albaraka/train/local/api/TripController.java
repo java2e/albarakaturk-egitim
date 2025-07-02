@@ -5,6 +5,7 @@ import com.albaraka.train.core.service.BaseController;
 import com.albaraka.train.core.service.BaseService;
 import com.albaraka.train.local.entity.Trip;
 import com.albaraka.train.local.service.TripService;
+import jakarta.persistence.PreUpdate;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -27,5 +28,10 @@ public class TripController extends BaseController<Trip> {
         return tripService;
     }
 
+    @PostMapping("/test")
+    public ResponseEntity test() throws Exception {
+        tripService.test();
+        return ResponseEntity.ok("ok");
+    }
 
 }
