@@ -1,7 +1,5 @@
 package com.albaraka.train.core.security.config;
 
-import com.albaraka.train.core.security.auditing.ApplicationAuditAware;
-import com.albaraka.train.core.security.user.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -14,6 +12,9 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import tr.sesasis.core.security.auditing.ApplicationAuditAware;
+import tr.sesasis.core.security.user.UserRepository;
+
 @Configuration
 @RequiredArgsConstructor
 public class ApplicationConfig {
