@@ -1,11 +1,11 @@
 package com.albaraka.train.core.security.token;
 
+import com.albaraka.train.core.security.user.User;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import tr.sesasis.core.security.user.User;
 
 @Data
 @Builder
