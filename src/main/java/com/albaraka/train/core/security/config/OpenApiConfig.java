@@ -34,6 +34,10 @@ import io.swagger.v3.oas.annotations.servers.Server;
                 @Server(
                         description = "PROD ENV",
                         url = "https://aliboucoding.com/course"
+                ),
+                @Server(
+                        description = "UAT ENV",
+                        url="http://localhost:8081/uat"
                 )
         },
         security = {
