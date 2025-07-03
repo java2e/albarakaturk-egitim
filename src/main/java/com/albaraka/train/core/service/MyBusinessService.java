@@ -6,7 +6,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public class MyBusinessService implements CommandLineRunner {
+public class MyBusinessService {
 
     private final RestClientService client;
 
@@ -35,8 +35,4 @@ public class MyBusinessService implements CommandLineRunner {
 
     }
 
-    @Override
-    public void run(String... args) throws Exception {
-        doSomething();
-    }
 }
