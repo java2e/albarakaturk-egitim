@@ -16,7 +16,7 @@ public class ScheduledBroadcast {
      * Her dakika başında (saniye 0’da) çalışır.
      * Alternatif olarak fixedRate = 60000 kullanabilirsiniz.
      */
-    @Scheduled(cron = "0 * * * * *")
+    @Scheduled(cron = "${cron.publish.hour}")
     public void publishEveryMinute() {
         System.out.println("BATCH CALISTIRILDI1!!!!!!  "+LocalDateTime.now().toString());
     }
