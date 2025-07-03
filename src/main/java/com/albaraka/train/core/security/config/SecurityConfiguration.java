@@ -1,5 +1,6 @@
 package com.albaraka.train.core.security.config;
 
+import com.albaraka.train.core.security.user.Role;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -15,6 +16,17 @@ import org.springframework.security.web.authentication.logout.LogoutHandler;
 
 import static org.springframework.http.HttpMethod.*;
 import static org.springframework.security.config.http.SessionCreationPolicy.STATELESS;
+
+import static com.albaraka.train.core.security.user.Permission.ADMIN_CREATE;
+import static com.albaraka.train.core.security.user.Permission.ADMIN_DELETE;
+import static com.albaraka.train.core.security.user.Permission.ADMIN_READ;
+import static com.albaraka.train.core.security.user.Permission.ADMIN_UPDATE;
+import static com.albaraka.train.core.security.user.Permission.MANAGER_CREATE;
+import static com.albaraka.train.core.security.user.Permission.MANAGER_DELETE;
+import static com.albaraka.train.core.security.user.Permission.MANAGER_READ;
+import static com.albaraka.train.core.security.user.Permission.MANAGER_UPDATE;
+import static com.albaraka.train.core.security.user.Role.ADMIN;
+import static com.albaraka.train.core.security.user.Role.MANAGER;
 
 @Configuration
 @EnableWebSecurity
@@ -34,6 +46,7 @@ public class SecurityConfiguration {
             "/webjars/**",
             "/api/admin/*/**",
             "/swagger-ui.html",
+            "/actuator/*",
     "/ws/**"};
     private final JwtAuthenticationFilter jwtAuthFilter;
     private final AuthenticationProvider authenticationProvider;
